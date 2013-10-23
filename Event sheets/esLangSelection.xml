@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>esLangSelection</name>
+    <events>
+        <event-block sid="8888288444406043">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5199398486263293" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">BtnCast</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7984552536537781" type="System">
+                    <param id="0" name="Variable">lang</param>
+                    <param id="1" name="Value">&quot;es&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="7444510157614578" type="System">
+                    <param id="0" name="Layout">Intro</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3872363534248538">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5706613123237307" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">BtnEusk</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4604998618223325" type="System">
+                    <param id="0" name="Variable">lang</param>
+                    <param id="1" name="Value">&quot;eu&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="7360835758889587" type="System">
+                    <param id="0" name="Layout">Intro</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4277887517332637">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1332771285045093" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="3560011261077143" type="System">
+                    <param id="0" name="Seconds">10</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="621391379531353" type="System">
+                    <param id="0" name="Layout">Intro</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

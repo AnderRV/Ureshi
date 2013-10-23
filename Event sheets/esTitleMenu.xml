@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>esTitleMenu</name>
+    <events>
+        <event-block sid="2949794801106655">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3729708102828971" type="System" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="8109294163644261" type="System" />
+                <action id="-24" name="Move to top" sid="8924609222744997" type="AlaOesteLogo" />
+                <action id="-25" name="Move to bottom" sid="1013158347616081" type="TalesOfUreshi" />
+                <action id="-15" name="Set visible" sid="2344174348169042" type="SakatuStart">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="6" name="Stop" sid="5778480128057197" type="Audio">
+                    <param id="0" name="Tag">&quot;BG&quot;</param>
+                </action>
+                <action id="4" name="Preload" sid="671209256467113" type="Audio">
+                    <param id="0" name="Audio file">boss_muere</param>
+                </action>
+                <action id="4" name="Preload" sid="4138489865758075" type="Audio">
+                    <param id="0" name="Audio file">boss_rie</param>
+                </action>
+                <action id="4" name="Preload" sid="1302179339082259" type="Audio">
+                    <param id="0" name="Audio file">cofre</param>
+                </action>
+                <action id="4" name="Preload" sid="1892507868624858" type="Audio">
+                    <param id="0" name="Audio file">coger_monedas</param>
+                </action>
+                <action id="4" name="Preload" sid="2762813747706585" type="Audio">
+                    <param id="0" name="Audio file">coger_cosas</param>
+                </action>
+                <action id="4" name="Preload" sid="9060711527514917" type="Audio">
+                    <param id="0" name="Audio file">disparo_en_gente</param>
+                </action>
+                <action id="4" name="Preload" sid="4943035212523498" type="Audio">
+                    <param id="0" name="Audio file">disparo_en_paredes</param>
+                </action>
+                <action id="4" name="Preload" sid="6182943574013333" type="Audio">
+                    <param id="0" name="Audio file">disparo</param>
+                </action>
+                <action id="4" name="Preload" sid="4882897232608274" type="Audio">
+                    <param id="0" name="Audio file">elkarrekin</param>
+                </action>
+                <action id="4" name="Preload" sid="7743531793332207" type="Audio">
+                    <param id="0" name="Audio file">enemigo_creacion</param>
+                </action>
+                <action id="4" name="Preload" sid="1648951009463112" type="Audio">
+                    <param id="0" name="Audio file">explosion_minas</param>
+                </action>
+                <action id="4" name="Preload" sid="2221689540031653" type="Audio">
+                    <param id="0" name="Audio file">game_over</param>
+                </action>
+                <action id="4" name="Preload" sid="8850279685758967" type="Audio">
+                    <param id="0" name="Audio file">marcus_impacto</param>
+                </action>
+                <action id="4" name="Preload" sid="161191283484668" type="Audio">
+                    <param id="0" name="Audio file">marcus_muere</param>
+                </action>
+                <action id="4" name="Preload" sid="2696728249788569" type="Audio">
+                    <param id="0" name="Audio file">marcus_muere</param>
+                </action>
+                <action id="4" name="Preload" sid="2687426811018869" type="Audio">
+                    <param id="0" name="Audio file">ingame</param>
+                </action>
+                <action id="4" name="Preload" sid="6731332984223354" type="Audio">
+                    <param id="0" name="Audio file">batalla_boss</param>
+                </action>
+                <action id="4" name="Preload" sid="3882534444292151" type="Audio">
+                    <param id="0" name="Audio file">ureshi_calma</param>
+                </action>
+                <action id="4" name="Preload" sid="3953053654214558" type="Audio">
+                    <param id="0" name="Audio file">ureshi_malote</param>
+                </action>
+                <action id="4" name="Preload" sid="5565630750852727" type="Audio">
+                    <param id="0" name="Audio file">ureshi_final</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3213303126583663">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Is visible" sid="5575597903540341" type="SakatuStart" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="2625163621746635" type="System">
+                            <param id="0" name="Seconds">5.0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8023322059212732" type="Function">
+                            <param id="0" name="Name">&quot;showSakatu&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="7655970834193921">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="6908272470369615" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">9</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="6839471112685857" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="907470635291004">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Is visible" sid="7303501901458952" type="SakatuStart" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9958867725825326" type="Function">
+                            <param id="0" name="Name">&quot;showSakatu&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7570533630426012">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5702825330234431" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="7230780387550344" type="System">
+                            <param id="0" name="Layout">LangSelection</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4924640060776382">
+            <conditions>
+                <condition id="0" name="On function" sid="1599811611377818" type="Function">
+                    <param id="0" name="Name">&quot;showSakatu&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Move to bottom" sid="2067955960209105" type="AlaOesteLogo" />
+                <action id="-24" name="Move to top" sid="9373846425150538" type="TalesOfUreshi" />
+                <action id="-15" name="Set visible" sid="5815485448628775" type="SakatuStart">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-24" name="Move to top" sid="2041762076594397" type="SakatuStart" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

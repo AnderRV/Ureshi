@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>esIntro</name>
+    <events>
+        <variable constant="0" name="lang" sid="3162693830711978" static="0" type="text">eu</variable>
+        <variable constant="0" name="introEnded" sid="2274903519674587" static="0" type="number">0</variable>
+        <event-block sid="4076409622770044">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7276552305508721" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="7548921061964688" type="Audio">
+                    <param id="0" name="Audio file">ureshi_calma</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="9015989205927698" type="Function">
+                    <param id="0" name="Name">&quot;setTextDefault&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5087261726928469">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8300369450619806" type="System">
+                            <param id="0" name="Variable">lang</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;es&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7166544698999292" type="IntroTxt">
+                            <param id="0" name="Text">&quot;Mirad chicos, ya ha salido el nuevo número del manga Tales of Ureshi!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3690262116331748">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6572752131300887" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="180991501589919" type="IntroTxt">
+                            <param id="0" name="Text">&quot;Adi neska-mutilak! Bada hemen Tales of Ureshi manga komikiaren ale berria!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" collapsed="1" sid="1285587229897793">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="9205790182098355" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="6" name="On button pressed" sid="2830874953261982" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">9</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="8247712483059698" type="Intro">
+                    <param id="0" name="Frame number">Intro.AnimationFrame+1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3881998301189966">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3011259465258826" type="System">
+                            <param id="0" name="Variable">introEnded</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7508516003882839">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="6704086121620773" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6602717814362623">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9187039508943374" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="7224698081083349" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Érase una vez…&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="937714325135039">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2252401651548871" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="6108819032355393" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Bazen behin...&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="782010886637248">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="2095689846417359" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7860990731038775">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="968979642720126" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="6915403143593217" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;El maravilloso mundo de Mangamore&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8180734927903582">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6130764435604132" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="7226622087224053" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Mangamore mundu miragarria&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2875502995924583">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="2434502112605302" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8621795555576856" type="Function">
+                                    <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
+                                    <param id="1" name="Parameter {n}">450{###}505{###}740{###}120</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4400847874559531">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="247334084016916" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="5918170752607707" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;En este increíble lugar, Ureshi ilumina a todas las criaturas procedentes del manga&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1297377636880586">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5833083310537388" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="2879755396598842" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Leku sineztezin honetan, Ureshik mangatik etorritako izaki guztiak argitzen ditu&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3969583632030139">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="4314996864772982" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8557378480936413" type="Function">
+                                    <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
+                                    <param id="1" name="Parameter {n}">450{###}505{###}740{###}120</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="6190051269124638">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="7393799514260759" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="4308880721938735" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Sin embargo, algo terrible está a punto de suceder…&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4951228073560901">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1047787745277138" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="6766079437430578" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Baina, zerbait izugarria gertatzear dago...&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="476195937243589">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="925917961675173" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="3358037387387707" type="Audio">
+                                    <param id="0" name="Tag">&quot;BG&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="988843357122955" type="Function">
+                                    <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
+                                    <param id="1" name="Parameter {n}">725{###}135{###}210{###}145</param>
+                                </action>
+                                <action id="0" name="Play" sid="1480056358453705" type="Audio">
+                                    <param id="0" name="Audio file">ureshi_malote</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="6683983458627178">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9031527754127206" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="5434889406416566" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Chicos, ¿por qué no jugamos juntos?...&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="324269790057979">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4935112368479411" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="9800835212485289" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Aizue, elkarrekin jolastu nahi duzue?&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4242822021442546">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="4153214341114486" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5117075712559037" type="Function">
+                                    <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
+                                    <param id="1" name="Parameter {n}">260{###}220{###}230{###}225</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7484355310187369">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="2376714585926186" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="5488575196981532" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;¿Eh?&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9213756755940063">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1860831388635797" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="8888892077085588" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Zer?&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5251276703094085">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="178005684714734" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9319782902965181" type="Function">
+                                    <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
+                                    <param id="1" name="Parameter {n}">175{###}171{###}222{###}230</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1305437347028137">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6513518609891603" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="9782430850603275" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Bwahahaha!!, soy la terrible oscuridad absoluta, y he venido a acabar con el reinado de Ureshi!!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7831279555699952">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="113102879310716" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="2870713228775556" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Kar kar kar! Erabateko iluntasun izugarria naiz eta Ureshiren erregealdiarekin akabatzera etorri naiz.&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9118136955256119">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="286704539796646" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="6447324987981957" type="Function">
+                                    <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
+                                    <param id="1" name="Parameter {n}">205{###}405{###}220{###}220</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7151811681165292">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="1783674830316509" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="2648598530620786" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Las tinieblas os aclaman, seres inferiores!!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5798485002687673">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5890198879611079" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="3830783401567829" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Ilunpeetakoak deika ari zaizkizue, mendeko izakiak!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1253253695920918">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="96397718534886" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">11</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="4582403237608004" type="Function">
+                                    <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
+                                    <param id="1" name="Parameter {n}">175{###}130{###}200{###}190</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="2884369842233627">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="8768378055019034" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="5420732903024951" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;¡¡¡Venid a mí!!!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3904559973498886">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7931315541386191" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="2449789478684514" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Etor zaitezte nigana!!!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2547392790103242">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="8882025382009204" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2031231315317555" type="Function">
+                                    <param id="0" name="Name">&quot;setTextDefault&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="9884310756652794">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="7191011816706098" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="4978299772976361" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;¡Oh no, va a acabar con todos ellos!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4451774516408193">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6957384796908665" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="4817219411867813" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Ene! Haiek guztiak akabatuko ditu!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6104674101122053">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="83910740871649" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7816940536395287" type="Function">
+                                    <param id="0" name="Name">&quot;setTextDefault&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="50934232123419">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6806598390544988" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="7528376755751463" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;¿Pero qué está pasando? Sale luz del manga!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3376497332394284">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9770812631451607" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="6063207713557746" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Baina zer gertatzen ari da? Mangatik argia ateratzen ari da!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8081622954201881">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="8448345038342791" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">14</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8081266447199179" type="Function">
+                                    <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
+                                    <param id="1" name="Parameter {n}">305{###}410{###}220{###}220</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="2830220283991285">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5692754707179831" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="9685152424870723" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Ahhhhh!!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5224004802409585">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9595208744881256" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="2860447216841696" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Ahhhhh!!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6734045646236666">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="5010129179753026" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">15</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5400473016791015" type="Function">
+                                    <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
+                                    <param id="1" name="Parameter {n}">694{###}98{###}305{###}110</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8617134380432544">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="1448266267106187" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="2753858291217093" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;¿Dónde… dónde estoy?&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4076760663398937">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3011507495274486" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="4753219862415511" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Non...non nago?&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5082920079879365">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="2797686012235784" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5169490789461577" type="Function">
+                                    <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
+                                    <param id="1" name="Parameter {n}">600{###}405{###}222{###}225</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4351449024514514" type="System">
+                                    <param id="0" name="Variable">introEnded</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="2804974843761978">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9448595898905365" type="System">
+                                            <param id="0" name="Variable">lang</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;es&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="7440696897654764" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Mis esbirros, tenemos intrusos y no quiero interferencias, ¡acabad con ellos! &quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3818798309015044">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6236188545779488" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="1555240036985992" type="IntroTxt">
+                                            <param id="0" name="Text">&quot;Nire morroiak, kanpotarrak ditugu eta ez dut interferentziarik nahi, akabatu haiek guztiak!&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2248649680364066">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4363280169505903" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="8973832146668608" type="Audio">
+                            <param id="0" name="Tag">&quot;BG&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="1658805597073896" type="System">
+                            <param id="0" name="Layout">Level1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3304669343008071">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3377431361300755" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="1669328857551163" type="Audio">
+                    <param id="0" name="Tag">&quot;BG&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="7221193244491025" type="System">
+                    <param id="0" name="Layout">TitleMenu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6999920424281522">
+            <conditions>
+                <condition id="0" name="On function" sid="1517879784658584" type="Function">
+                    <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="820222186491287" type="IntroTxt">
+                    <param id="0" name="X">Function.Param(0)</param>
+                    <param id="1" name="Y">Function.Param(1)</param>
+                </action>
+                <action id="-7" name="Set size" sid="8010941035839457" type="IntroTxt">
+                    <param id="0" name="Width">Function.Param(2)</param>
+                    <param id="1" name="Height">Function.Param(3)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1138517350975285">
+            <conditions>
+                <condition id="0" name="On function" sid="4492994092952925" type="Function">
+                    <param id="0" name="Name">&quot;setTextDefault&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="1413806946894515" type="Function">
+                    <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
+                    <param id="1" name="Parameter {n}">483{###}545{###}760{###}90</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
