@@ -90,7 +90,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Intro">
+        <object-folder expanded="1" name="Intro">
             <object-type name="Intro" sid="9275822467617549">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -128,6 +128,10 @@
                 <texture />
             </object-type>
             <object-type name="BtnCast" sid="9972738035068732">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="LangSelBG" sid="9618062474237517">
                 <plugin id="TiledBg" />
                 <texture />
             </object-type>

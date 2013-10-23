@@ -2244,8 +2244,9 @@
                 <condition id="-4" name="Trigger once while true" sid="8251235949673678" type="System" />
             </conditions>
             <actions>
-                <action id="6" name="Stop" sid="2076506584127812" type="Audio">
-                    <param id="0" name="Tag">&quot;BG&quot;</param>
+                <action id="0" name="Call function" sid="7307023996273638" type="Function">
+                    <param id="0" name="Name">&quot;end&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
                 <action id="0" name="Play" sid="4669359756970904" type="Audio">
                     <param id="0" name="Audio file">boss_muere</param>
@@ -2275,7 +2276,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6981039255668408">
+        <event-block collapsed="1" sid="6981039255668408">
             <conditions>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1809411713083693" type="EnemyBoss">
                     <param id="0" name="Instance variable">dead</param>
@@ -2323,7 +2324,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block collapsed="1" sid="2272656745781025">
+        <event-block sid="2272656745781025">
             <conditions>
                 <condition id="2" name="Is playing" sid="2570712460176991" type="EnemyBoss">
                     <param id="0" name="Animation">&quot;Hit&quot;</param>
@@ -2419,15 +2420,18 @@
             </conditions>
             <actions>
                 <action id="-16" name="Wait" sid="3569132888500043" type="System">
-                    <param id="0" name="Seconds">0.4</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="631151079202067" type="EnemyBoss">
-                    <param id="0" name="Instance variable">hit</param>
-                    <param id="1" name="Value">0</param>
+                    <param id="0" name="Seconds">0.3</param>
                 </action>
                 <action id="0" name="Call function" sid="8040028351194309" type="Function">
                     <param id="0" name="Name">&quot;invokeBoss&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="3034022687192292" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="631151079202067" type="EnemyBoss">
+                    <param id="0" name="Instance variable">hit</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -2445,7 +2449,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block collapsed="1" sid="1993004590086241">
+        <event-block sid="1993004590086241">
             <conditions>
                 <condition id="0" name="On function" sid="9842761492006427" type="Function">
                     <param id="0" name="Name">&quot;invokeBoss&quot;</param>
@@ -2483,6 +2487,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-16" name="Wait" sid="9348720368408069" type="System">
+                                    <param id="0" name="Seconds">random(0.5, 2.5)</param>
+                                </action>
                                 <action id="-3" name="Create object" sid="1680773018774341" type="System">
                                     <param id="0" name="Object to create">EnemyRunner</param>
                                     <param id="1" name="Layer">&quot;Game&quot;</param>
@@ -2494,7 +2501,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="7923245757720824" type="EnemyRunner">
                                     <param id="0" name="Instance variable">delay</param>
-                                    <param id="1" name="Value">random(0,3)</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-25" name="Move to bottom" sid="5378033642624171" type="EnemyRunner" />
                             </actions>
@@ -2504,6 +2511,9 @@
                                 <condition id="-22" name="Else" sid="7017193234451876" type="System" />
                             </conditions>
                             <actions>
+                                <action id="-16" name="Wait" sid="1096598761515993" type="System">
+                                    <param id="0" name="Seconds">random(0.1, 2.5)</param>
+                                </action>
                                 <action id="0" name="Spawn another object" sid="9307097879904468" type="EnemyBoss">
                                     <param id="0" name="Object">EnemyLimpet</param>
                                     <param id="1" name="Layer">&quot;Game&quot;</param>
@@ -2594,17 +2604,29 @@
         <event-block sid="9369385076260687">
             <conditions>
                 <condition id="-19" name="On destroyed" sid="8447629913963337" type="EnemyBoss" />
-                <condition id="-14" name="Compare variable" sid="4062691435863478" type="System">
-                    <param id="0" name="Variable">gameOver</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="8524225368552891" type="Function">
                     <param id="0" name="Name">&quot;end&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="-13" name="Set boolean" sid="5667022646333353" type="Enemy">
+                    <param id="0" name="Instance variable">dead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="4097637219297659" type="Enemy">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="2024356366661788" type="Enemy">
+                    <param id="0" name="Animation">&quot;Dead&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6994096584365688" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="2675152878008148" type="Enemy" />
+                <action id="-9" name="Destroy" sid="7474373910171589" type="Coin" />
             </actions>
         </event-block>
         <comment>ENEMY</comment>
@@ -2986,7 +3008,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block collapsed="1" sid="3794293046336451">
+        <event-block sid="3794293046336451">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="4121557458733939" type="Enemy">
                     <param id="0" name="Object">Bullet</param>

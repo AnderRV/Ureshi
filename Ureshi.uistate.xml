@@ -11,13 +11,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Level1</layout>
-        <layout>Intro</layout>
-        <layout>TitleMenu</layout>
-        <layout>LangSelection</layout>
-        <event-sheet>esMechanics</event-sheet>
-        <event-sheet>esIntro</event-sheet>
-        <event-sheet>esTitleMenu</event-sheet>
-        <event-sheet active="1">esLangSelection</event-sheet>
+        <event-sheet active="1">esMechanics</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
