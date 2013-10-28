@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1382561773
+#1382985943
 index.html
 c2runtime.js
 jquery-2.0.0.min.js
@@ -7,6 +7,7 @@ logo.png
 images\alaoestelogo-sheet0.png
 images\talesofureshi-sheet0.png
 images\sakatustart-sheet0.png
+images\loading.png
 images\intro-sheet0.png
 images\intro-sheet1.png
 images\intro-sheet2.png
@@ -100,7 +101,6 @@ images\enemyflyer-sheet1.png
 images\enemyflyer-sheet2.png
 images\bulletenemy-sheet0.png
 images\bulletenemy-sheet1.png
-images\bg_2.png
 images\gui_bg.png
 images\bg_3.png
 images\bg_4.png
@@ -162,6 +162,7 @@ images\bulletparticlesenemy.png
 images\explosion-sheet0.png
 images\explosion-sheet1.png
 images\explosion-sheet2.png
+images\bg_2.png
 media\alarma_tiempo.m4a
 media\alarma_tiempo.ogg
 media\boss_invoca.m4a
