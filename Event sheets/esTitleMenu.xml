@@ -3,13 +3,23 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>esTitleMenu</name>
     <events>
+        <variable constant="0" name="bulletSpread" sid="6788383545388462" static="0" type="number">5</variable>
+        <variable constant="0" name="standardDamage" sid="8703895609081258" static="0" type="number">5</variable>
+        <variable constant="0" name="gameOver" sid="1472445866786551" static="0" type="number">0</variable>
+        <variable constant="0" name="introEnded" sid="2274903519674587" static="0" type="number">0</variable>
+        <variable constant="0" name="loaded" sid="6682436627495445" static="0" type="number">0</variable>
+        <variable constant="0" name="lang" sid="3162693830711978" static="0" type="text">eu</variable>
         <event-block sid="2949794801106655">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="3729708102828971" type="System" />
             </conditions>
             <actions>
-                <action id="-21" name="Reset global variables" sid="8109294163644261" type="System" />
+                <action id="0" name="Call function" sid="585028897981554" type="Function">
+                    <param id="0" name="Name">&quot;restartGlobalVars&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
                 <action id="-24" name="Move to top" sid="8924609222744997" type="AlaOesteLogo" />
+                <action id="-24" name="Move to top" sid="2281973338084331" type="Loading" />
                 <action id="-25" name="Move to bottom" sid="1013158347616081" type="TalesOfUreshi" />
                 <action id="-15" name="Set visible" sid="2344174348169042" type="SakatuStart">
                     <param id="0" name="Visibility">0</param>
@@ -68,6 +78,9 @@
                 <action id="4" name="Preload" sid="6731332984223354" type="Audio">
                     <param id="0" name="Audio file">batalla_boss</param>
                 </action>
+                <action id="4" name="Preload" sid="9491349740569595" type="Audio">
+                    <param id="0" name="Audio file">tales_of_ureshi</param>
+                </action>
                 <action id="4" name="Preload" sid="3882534444292151" type="Audio">
                     <param id="0" name="Audio file">ureshi_calma</param>
                 </action>
@@ -79,17 +92,32 @@
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="3213303126583663">
+                <event-block sid="2134617853471387">
                     <conditions>
-                        <condition id="-9" inverted="1" name="Is visible" sid="5575597903540341" type="SakatuStart" />
+                        <condition id="-14" name="Compare variable" sid="9226407584818054" type="System">
+                            <param id="0" name="Variable">loaded</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="2625163621746635" type="System">
-                            <param id="0" name="Seconds">5.0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="8023322059212732" type="Function">
+                        <action id="0" name="Call function" sid="1029091554362311" type="Function">
                             <param id="0" name="Name">&quot;showSakatu&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8261467095442527">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2387675401270106" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="5356596708248552" type="System">
+                            <param id="0" name="Seconds">10.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7333468202269909" type="System">
+                            <param id="0" name="Variable">loaded</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -107,26 +135,38 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="907470635291004">
+                <event-block sid="9333070878335387">
                     <conditions>
-                        <condition id="-9" inverted="1" name="Is visible" sid="7303501901458952" type="SakatuStart" />
+                        <condition id="-14" name="Compare variable" sid="1602939044045253" type="System">
+                            <param id="0" name="Variable">loaded</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="9958867725825326" type="Function">
-                            <param id="0" name="Name">&quot;showSakatu&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7570533630426012">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="5702825330234431" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="7230780387550344" type="System">
-                            <param id="0" name="Layout">LangSelection</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="907470635291004">
+                            <conditions>
+                                <condition id="-9" inverted="1" name="Is visible" sid="7303501901458952" type="SakatuStart" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9958867725825326" type="Function">
+                                    <param id="0" name="Name">&quot;showSakatu&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7570533630426012">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5702825330234431" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="7230780387550344" type="System">
+                                    <param id="0" name="Layout">LangSelection</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -137,12 +177,62 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-25" name="Move to bottom" sid="2147328165737625" type="Loading" />
                 <action id="-25" name="Move to bottom" sid="2067955960209105" type="AlaOesteLogo" />
                 <action id="-24" name="Move to top" sid="9373846425150538" type="TalesOfUreshi" />
                 <action id="-15" name="Set visible" sid="5815485448628775" type="SakatuStart">
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-24" name="Move to top" sid="2041762076594397" type="SakatuStart" />
+                <action id="-16" name="Wait" sid="3957570479553678" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Play" sid="6399364696520084" type="Audio">
+                    <param id="0" name="Audio file">tales_of_ureshi</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9398873464643324">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="6379334713652561" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8544079978970885" type="System">
+                    <param id="0" name="Variable">loaded</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="8023322059212732" type="Function">
+                    <param id="0" name="Name">&quot;showSakatu&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9357773329392718">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade out finished" sid="5885956176211214" type="Loading" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="6164179583491758" type="Loading" />
+            </actions>
+        </event-block>
+        <event-block sid="9409911072425138">
+            <conditions>
+                <condition id="0" name="On function" sid="2872934585317757" type="Function">
+                    <param id="0" name="Name">&quot;restartGlobalVars&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1197983180717814" type="System">
+                    <param id="0" name="Variable">gameOver</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="1082153535941768" type="System">
+                    <param id="0" name="Variable">introEnded</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
     </events>

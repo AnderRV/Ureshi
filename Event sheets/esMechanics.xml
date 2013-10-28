@@ -3,9 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>esMechanics</name>
     <events>
-        <variable constant="0" name="bulletSpread" sid="6788383545388462" static="0" type="number">5</variable>
-        <variable constant="0" name="standardDamage" sid="8703895609081258" static="0" type="number">5</variable>
-        <variable constant="0" name="gameOver" sid="1472445866786551" static="0" type="number">0</variable>
         <comment>SYSTEM</comment>
         <event-block sid="4046480387644705">
             <conditions>

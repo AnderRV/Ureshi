@@ -3,8 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>esIntro</name>
     <events>
-        <variable constant="0" name="lang" sid="3162693830711978" static="0" type="text">eu</variable>
-        <variable constant="0" name="introEnded" sid="2274903519674587" static="0" type="number">0</variable>
         <event-block sid="4076409622770044">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7276552305508721" type="System" />

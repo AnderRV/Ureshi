@@ -37,7 +37,13 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="noise">Noise</effect>
+        <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
+        <effect author="Scirra" id="sepia">Sepia</effect>
+        <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
+        <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -59,7 +65,7 @@
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="0" name="TitleMenu">
+        <object-folder expanded="1" name="TitleMenu">
             <object-type name="AlaOesteLogo" sid="6148407493150588">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -72,22 +78,60 @@
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6937669127803509" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.500531" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type name="SakatuStart" sid="2466560794951078">
                 <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="GlowVertical">
+                        <effect id="glowvertical" />
+                    </effect-type>
+                    <effect-type name="GlowHorizontal">
+                        <effect id="glowhorizontal" />
+                    </effect-type>
+                    <effect-type name="Pulse">
+                        <effect id="pulse" />
+                    </effect-type>
+                </effects>
                 <animation-folder expanded="1">
-                    <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5561517888924082" speed="6">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5561517888924082" speed="6">
+                        <frame duration="1" hotspotX="0.50165" hotspotY="0.52381">
+                            <collision-poly>
+                                <point x="0.00660066" y="0.0952381" />
+                                <point x="0.49835" y="0" />
+                                <point x="0.990099" y="0.142857" />
+                                <point x="0.993399" y="0.904762" />
+                                <point x="0.49835" y="0.666667" />
+                                <point x="0.00660066" y="0.904762" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="Loading" sid="4117932734847671">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="9381196898711852">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="GlowHorizontal">
+                        <effect id="glowhorizontal" />
+                    </effect-type>
+                    <effect-type name="GlowVertical">
+                        <effect id="glowvertical" />
+                    </effect-type>
+                    <effect-type name="Noise">
+                        <effect id="noise" />
+                    </effect-type>
+                    <effect-type name="Sepia">
+                        <effect id="sepia" />
+                    </effect-type>
+                </effects>
+                <texture />
             </object-type>
         </object-folder>
         <object-folder expanded="1" name="Intro">
@@ -2176,10 +2220,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BG_2" sid="2611583652656587">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
         <object-type name="GUI_BG" sid="1267792672879185">
             <plugin id="TiledBg" />
             <texture />
@@ -3093,6 +3133,10 @@
         </object-type>
         <object-type name="Mouse" sid="1367111669906476">
             <plugin id="Mouse" />
+        </object-type>
+        <object-type name="BG_2" sid="2611583652656587">
+            <plugin id="TiledBg" />
+            <texture />
         </object-type>
     </object-folder>
     <families>

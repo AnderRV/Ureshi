@@ -34,17 +34,39 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="GlowVertical">
+                            <parameters>
+                                <intensity>0.25</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="GlowHorizontal">
+                            <parameters>
+                                <intensity>0.25</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="Pulse">
+                            <parameters>
+                                <center-x>0.5</center-x>
+                                <center-y>0.5</center-y>
+                                <frequency>100</frequency>
+                                <intensity>0.1</intensity>
+                                <lighting>0.1</lighting>
+                                <speed>4</speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>475</x>
-                        <y>230</y>
+                        <x>718</x>
+                        <y>309</y>
                         <z>0</z>
-                        <width>324</width>
-                        <height>72</height>
+                        <width>303</width>
+                        <height>21</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.501650155</hotspotX>
+                        <hotspotY>0.523809552</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -62,10 +84,10 @@
                         <x>470</x>
                         <y>300</y>
                         <z>0</z>
-                        <width>940</width>
+                        <width>941</width>
                         <height>600</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.500531375</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -86,6 +108,60 @@
                         <z>0</z>
                         <width>940</width>
                         <height>600</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Loading" uid="234">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Center</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>1</fade-in-time>
+                                <wait-time>1</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="GlowHorizontal">
+                            <parameters>
+                                <intensity>0.5</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="GlowVertical">
+                            <parameters>
+                                <intensity>0.5</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="Noise">
+                            <parameters>
+                                <color>0.25</color>
+                                <intensity>0.25</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="Sepia">
+                            <parameters>
+                                <intensity>0.4</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>470</x>
+                        <y>425</y>
+                        <z>0</z>
+                        <width>155</width>
+                        <height>19</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
