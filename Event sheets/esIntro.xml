@@ -18,6 +18,9 @@
                     <param id="0" name="Name">&quot;setTextDefault&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="-15" name="Set visible" sid="2801761543011212" type="IntroTxt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="5087261726928469">
@@ -46,7 +49,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block any="1" collapsed="1" sid="1285587229897793">
+        <event-block any="1" sid="1285587229897793">
             <conditions>
                 <condition id="0" name="On key pressed" sid="9205790182098355" type="Keyboard">
                     <param id="0" name="Key">13 (Return)</param>
@@ -603,10 +606,6 @@
                                     <param id="0" name="Name">&quot;setTextPosAndSize&quot;</param>
                                     <param id="1" name="Parameter {n}">600{###}405{###}222{###}225</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="4351449024514514" type="System">
-                                    <param id="0" name="Variable">introEnded</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="2804974843761978">
@@ -634,6 +633,26 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="4448738298521998">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="6974837267359521" type="Intro">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">17</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="8594519334653203" type="IntroTxt">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="6" name="Stop" sid="6878956132721243" type="Audio">
+                                    <param id="0" name="Tag">&quot;BG&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4351449024514514" type="System">
+                                    <param id="0" name="Variable">introEnded</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

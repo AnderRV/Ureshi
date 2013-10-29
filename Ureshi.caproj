@@ -38,11 +38,11 @@
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
+        <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
         <effect author="Scirra" id="noise">Noise</effect>
         <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
         <effect author="Scirra" id="sepia">Sepia</effect>
-        <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
-        <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -138,7 +138,7 @@
             <object-type name="Intro" sid="9275822467617549">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
-                    <animation framecount="17" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2458812567402213" speed="0">
+                    <animation framecount="18" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2458812567402213" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -156,6 +156,7 @@
                         <frame duration="1" hotspotX="0.500531" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.500531" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.500531" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2794,7 +2795,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="2" loop="0" name="Dead" pingpong="0" repeatcount="15" repeatto="0" sid="4143138581829605" speed="12">
+                <animation framecount="2" loop="0" name="Dead" pingpong="0" repeatcount="20" repeatto="0" sid="4143138581829605" speed="10">
                     <frame duration="1" hotspotX="0.49866" hotspotY="1">
                         <image-point name="Spawn" x="0.605898" y="0.587037" />
                         <collision-poly>
@@ -3087,6 +3088,14 @@
                     <behavior id="Fade" />
                 </behavior-type>
             </behaviors>
+            <effects>
+                <effect-type name="GlowHorizontal">
+                    <effect id="glowhorizontal" />
+                </effect-type>
+                <effect-type name="GlowVertical">
+                    <effect id="glowvertical" />
+                </effect-type>
+            </effects>
         </object-type>
         <object-type name="SolidSpecial" sid="7914792266314026">
             <plugin id="TiledBg" />
@@ -3276,7 +3285,7 @@
         <global-instance type="Mouse" uid="218" />
     </global-instances>
     <sounds-folder expanded="1">
-        <file-folder expanded="0" name="FX">
+        <file-folder expanded="1" name="FX">
             <file name="alarma_tiempo.m4a" />
             <file name="alarma_tiempo.ogg" />
             <file name="alarma_tiempo.wav" />

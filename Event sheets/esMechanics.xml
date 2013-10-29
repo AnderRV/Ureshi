@@ -406,6 +406,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="7616825241738339">
+            <conditions>
+                <condition id="4" name="On finished" sid="8775664787633814" type="Explosion">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2880800473732859" type="Explosion" />
+            </actions>
+        </event-block>
         <comment>FUNCTIONS</comment>
         <event-block sid="3845902378208406">
             <conditions>
@@ -429,29 +439,45 @@
                 <action id="0" name="Play" sid="2575964863907016" type="Audio">
                     <param id="0" name="Audio file">ureshi_final</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-5</param>
                     <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
-                </action>
-                <action id="0" name="Play" sid="4957417389296074" type="Audio">
-                    <param id="0" name="Audio file">elkarrekin</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
-                <action id="4" name="Set animation" sid="2687949446081729" type="Player">
-                    <param id="0" name="Animation">&quot;Victory&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="1707236254710805" type="Player">
                     <param id="0" name="Instance variable">canMove</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-16" name="Wait" sid="1898350527810218" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="4" name="Set animation" sid="2687949446081729" type="Player">
+                    <param id="0" name="Animation">&quot;Victory&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="4" name="Set animation" sid="9041202055642577" type="Ureshi">
                     <param id="0" name="Animation">&quot;Free&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="-16" name="Wait" sid="5320117103173885" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Play" sid="4957417389296074" type="Audio">
+                    <param id="0" name="Audio file">elkarrekin</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="6773988961539694" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1522311509735233" type="GUIGameOverTxt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="4923108050913287" type="System">
+                    <param id="0" name="Seconds">6</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="4145937432745903" type="GUIGameOverTxt" />
                 <action id="-16" name="Wait" sid="1040572499591718" type="System">
-                    <param id="0" name="Seconds">30</param>
+                    <param id="0" name="Seconds">5</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="5512183283717232" type="System">
                     <param id="0" name="Layout">TitleMenu</param>
@@ -1881,7 +1907,7 @@
             </actions>
         </event-block>
         <comment>MINE</comment>
-        <event-block any="1" sid="9107033906654897">
+        <event-block any="1" collapsed="1" sid="9107033906654897">
             <conditions>
                 <condition id="-18" name="On created" sid="2187145225636749" type="Mine" />
             </conditions>
@@ -1893,13 +1919,22 @@
                     <param id="0" name="Animation">&quot;Explode&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="0" name="Play" sid="9530633568633771" type="Audio">
-                    <param id="0" name="Audio file">explosion_minas</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
             </actions>
+            <sub-events>
+                <event-block sid="3475517257657478">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="3447582636582099" type="Mine" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="1132785869010065" type="Audio">
+                            <param id="0" name="Audio file">explosion_minas</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block any="1" sid="1604791216961795">
             <conditions>
@@ -1912,7 +1947,7 @@
             </actions>
         </event-block>
         <comment>POWER UP</comment>
-        <event-block sid="9399725558642077">
+        <event-block collapsed="1" sid="9399725558642077">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="1768119086512444" type="PowerUp">
                     <param id="0" name="Object">Player</param>
@@ -2181,7 +2216,7 @@
             </actions>
         </event-block>
         <comment>BOSS</comment>
-        <event-block collapsed="1" sid="8282264760206834">
+        <event-block sid="8282264760206834">
             <conditions>
                 <condition id="0" name="On function" sid="4343467417454197" type="Function">
                     <param id="0" name="Name">&quot;bossExplotions&quot;</param>
@@ -2213,18 +2248,18 @@
                         <action id="6" name="Set speed" sid="9597776557672523" type="Explosion">
                             <param id="0" name="Speed">Explosion.AnimationSpeed * random(1, 1.9)</param>
                         </action>
-                        <action id="0" name="Play" sid="1256058386494463" type="Audio">
-                            <param id="0" name="Audio file">explosion_minas</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
                         <action id="2" name="Stop" sid="2315739421641309" type="Explosion" />
                         <action id="-16" name="Wait" sid="2506087198469282" type="System">
                             <param id="0" name="Seconds">random(0.1, 0.75)</param>
                         </action>
                         <action id="-15" name="Set visible" sid="3196356478827427" type="Explosion">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="1256058386494463" type="Audio">
+                            <param id="0" name="Audio file">explosion_minas</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="3" name="Start" sid="3475038582982449" type="Explosion">
                             <param id="0" name="From">0</param>
@@ -2252,6 +2287,20 @@
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="1062837832301396" type="Function">
+                    <param id="0" name="Name">&quot;bossExplotions&quot;</param>
+                    <param id="1" name="Parameter {n}">EnemyBoss.X{###}EnemyBoss.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="5255815941177544" type="System">
+                    <param id="0" name="Seconds">random(1,2)</param>
+                </action>
+                <action id="0" name="Call function" sid="1102611842610371" type="Function">
+                    <param id="0" name="Name">&quot;bossExplotions&quot;</param>
+                    <param id="1" name="Parameter {n}">EnemyBoss.X{###}EnemyBoss.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="4812281654949352" type="System">
+                    <param id="0" name="Seconds">random(1,2)</param>
+                </action>
+                <action id="0" name="Call function" sid="8692018377395633" type="Function">
                     <param id="0" name="Name">&quot;bossExplotions&quot;</param>
                     <param id="1" name="Parameter {n}">EnemyBoss.X{###}EnemyBoss.Y</param>
                 </action>
@@ -2444,9 +2493,13 @@
                     <param id="0" name="Animation">&quot;Landed&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="-13" name="Set boolean" sid="4278767005863259" type="EnemyBoss">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="1993004590086241">
+        <event-block collapsed="1" sid="1993004590086241">
             <conditions>
                 <condition id="0" name="On function" sid="9842761492006427" type="Function">
                     <param id="0" name="Name">&quot;invokeBoss&quot;</param>
@@ -2534,6 +2587,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-13" name="Set boolean" sid="2426291488220451" type="EnemyBoss">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action behavior="Physics" id="4" name="Apply impulse towards position" sid="2639999971488558" type="EnemyBoss">
                     <param id="0" name="Impulse">3500</param>
                     <param id="1" name="X">EnemyBoss.X</param>
@@ -3072,18 +3129,17 @@
                             <param id="4" name="Volume">0</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action id="-16" name="Wait" sid="5954577259628851" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="3419553492064653" type="Enemy" />
                     </actions>
                     <sub-events>
                         <event-block sid="3139646262765102">
                             <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6805946727476018" type="Enemy">
+                                    <param id="0" name="Instance variable">movement</param>
+                                </condition>
                                 <condition id="-8" name="Compare two values" sid="5502414659588326" type="System">
                                     <param id="0" name="First value">random(0,3)</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">1</param>
+                                    <param id="2" name="Second value">1.5</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -3315,16 +3371,6 @@
                 </event-block>
                 <comment>ENEMY WALL</comment>
             </sub-events>
-        </event-block>
-        <event-block sid="7616825241738339">
-            <conditions>
-                <condition id="4" name="On finished" sid="8775664787633814" type="Explosion">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="2880800473732859" type="Explosion" />
-            </actions>
         </event-block>
     </events>
 </c2eventsheet>
