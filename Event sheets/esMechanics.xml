@@ -2412,6 +2412,9 @@
                             <param id="2" name="Y">random(-300, -150)</param>
                             <param id="3" name="Image point">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="4646020155065478" type="Mine">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -2571,6 +2574,9 @@
                                     <param id="2" name="Image point">&quot;Invoke&quot;</param>
                                 </action>
                                 <action id="-25" name="Move to bottom" sid="3957512157277278" type="EnemyLimpet" />
+                                <action id="-15" name="Set visible" sid="4858103169951231" type="EnemyLimpet">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                                 <action id="-7" name="Set size" sid="4994261545974595" type="EnemyLimpet">
                                     <param id="0" name="Width">114</param>
                                     <param id="1" name="Height">45</param>
