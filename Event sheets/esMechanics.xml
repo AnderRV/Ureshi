@@ -2499,7 +2499,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block collapsed="1" sid="1993004590086241">
+        <event-block sid="1993004590086241">
             <conditions>
                 <condition id="0" name="On function" sid="9842761492006427" type="Function">
                     <param id="0" name="Name">&quot;invokeBoss&quot;</param>
@@ -2554,6 +2554,7 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-25" name="Move to bottom" sid="5378033642624171" type="EnemyRunner" />
+                                <action id="-25" name="Move to bottom" sid="8711490566323955" type="Ureshi" />
                             </actions>
                         </event-block>
                         <event-block sid="2580663185824694">
@@ -2574,6 +2575,7 @@
                                     <param id="0" name="Width">114</param>
                                     <param id="1" name="Height">45</param>
                                 </action>
+                                <action id="-25" name="Move to bottom" sid="7734936499279503" type="Ureshi" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -3062,7 +3064,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3794293046336451">
+        <event-block collapsed="1" sid="3794293046336451">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="4121557458733939" type="Enemy">
                     <param id="0" name="Object">Bullet</param>
