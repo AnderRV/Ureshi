@@ -1,6 +1,6 @@
 Ureshi
 ======
-See a demo [on GitHub pages](anderrv.github.io/Ureshi) or [live on Mangamore](http://mangamore.net/tales-of-ureshi/)!
+See a demo [on GitHub pages](http://anderrv.github.io/Ureshi) or [live on Mangamore](http://mangamore.net/tales-of-ureshi/)!
 
 This is a project for [Mangamore](http://mangamore.net). Thanks to them and Amorebieta-Etxano.
 
